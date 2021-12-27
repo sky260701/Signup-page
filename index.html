@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(179, 31, 216);
+            display: flex;
+            align-items: center;
+        }
+        p {
+          font-size: 20px;
+        }
+        form{
+            /* border: 2px black solid; */
+            box-shadow: 0 2px 4px 1px;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+            background: white;
+            float: left 50%;
+        }
+
+        #Header {
+            padding-left: 20px;
+            border-bottom: solid black 1pt;
+            
+        }
+
+        #Header h2 {
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .firstname {
+            margin: 10px;
+            margin-top: 15PX;
+            border: none;
+            height: 41px;
+            background: #f2f2f2;
+            width: 350px;
+        }
+
+        #firstname {
+            margin: 10px;
+            margin-top: 15PX;
+            border: none;
+            height: 41px;
+            background: #f2f2f2;
+            width: 160px;
+        }
+        #lastname {
+            margin: 10px;
+            margin-top: 15PX;
+            border: none;
+            height: 41px;
+            background: #f2f2f2;
+            width: 160px;
+        }
+        button {
+          padding: 10px;
+          margin-top: 40px;
+          /* border-radius: 4px; */
+          padding-left: 10px;
+          background-color: rgb(232, 114, 200);
+          margin-bottom: 10px;
+          border: none;
+          cursor: pointer;
+
+        }
+
+        button:hover{
+          background-color: rgb(232, 53, 183);
+          color: white;
+        }
+        h2 {
+          font-size: 50px;
+        }
+        a {
+          float: left;
+          padding-left: 20px;
+        }
+        input [type="checkbox"] {
+          padding: 5px;
+        }
+        @media screen and (max-width: 480px) {
+          body {
+          background-color: lightgreen;
+          }
+          form{
+            width: 300px;
+          }
+          #firstname{
+            width: 122px;
+          }
+          #lastname{
+            width: 122px;
+          }
+          .firstname{
+            width: 280px;
+          }
+}
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div id="Header">
+        <h2>Sign Up</h2>
+        <p>Please fill in this form to create an account!</p>
+      </div>
+      <input type="text" placeholder="  First Name *" id="firstname" required/>
+      <input type="text" placeholder="  Last Name *" id="lastname" required />
+      <br />
+      <input type="email" placeholder="  Email *" class="firstname" id="" required /><br />
+      <input
+        type="password"
+        placeholder="  Password (8 characters only) *"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        class="firstname"
+        id=""
+        maxlength="8"
+        required
+      /><br />
+      <input
+        type="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        placeholder="  Confirm Password  (8 characters only)*"
+        class="firstname"
+        id=""
+        maxlength="8"
+        required
+      /><br />
+
+      <div>
+      <input type="checkbox" id="" required />I accept Terms of Use & Privacy Policy  <br>
+      <button>Submit</button>
+    </div>
+    </form>
+  </body>
+</html>
